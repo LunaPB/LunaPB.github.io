@@ -1,17 +1,14 @@
 <?php
 
-require ("config.php");
 echo "<h1> Práctica: Conexión a mi servidor de datos MYSQL </h1><br><br>";
-if ($conexion=mysqli_connect($servidor, $usuario, $password, $bd))
-{
+try {
+    $conn = new PDO("sqlsrv:server = tcp:lunapb.database.windows.net,1433; Database = programacionweb", "CloudSAdcf09f47", "ProgWeb78*Test");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
 echo "Tu conexión ha sido exitosa";
 }
-else
-{
-echo "Error conectando con MYSQL <br> ".mysqli_connect_error();
+catch (PDOException $e) {
+    print("La conexión ha fallado.");
+    die(print_r($e));
 }
-echo "<br><br>";
-
-mysqli_close($conexion);
-
 ?>
