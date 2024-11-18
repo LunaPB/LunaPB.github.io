@@ -1,6 +1,6 @@
 <?php
 $servidor="lunapb.database.windows.net";
-$usuario="CloudSAdcf09f47";
+$usuario="Thefrigosteam_hotmail.com#EXT#@Thefrigosteamhotmail.onmicrosoft.com";
 $password="ProgWeb78*Test";
 $bd="programacionweb";
 ?>
